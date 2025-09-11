@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects | Shivam Rajput</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: #fff;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      padding: 50px 20px;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      color: #ff6f61;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      margin-top: 40px;
+      font-size: 1.8rem;
+      color: #fad0c4;
+    }
+
+    .projects-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+      width: 100%;
+      max-width: 1000px;
+      margin-top: 20px;
+    }
+
+    .project-card {
+      background: rgba(255, 255, 255, 0.05);
+      padding: 20px;
+      border-radius: 15px;
+      text-align: center;
+      transition: 0.3s;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    }
+
+    .project-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+    }
+
+    .project-card h3 {
+      font-size: 1.3rem;
+      margin-bottom: 10px;
+      color: #fff;
+    }
+
+    .project-card p {
+      font-size: 0.95rem;
+      color: #ccc;
+      margin-bottom: 15px;
+    }
+
+    .project-card a {
+      display: inline-block;
+      margin-top: 10px;
+      text-decoration: none;
+      padding: 8px 16px;
+      border-radius: 20px;
+      background: #ff6f61;
+      color: #fff;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    .project-card a:hover {
+      background: #ff3b2e;
+    }
+
+    a.back-btn {
+      margin-top: 50px;
+      text-decoration: none;
+      padding: 12px 25px;
+      border-radius: 25px;
+      background: #ff6f61;
+      color: #fff;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    a.back-btn:hover {
+      background: #ff3b2e;
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+  <h1>My Projects</h1>
+  <p>Here are some highlighted projects showcasing my work in <strong>Data Analysis</strong> and <strong>Front-End Web Development</strong>.</p>
+
+  <!-- Data Analysis Projects -->
+  <h2>📊 Data Analysis Projects</h2>
+  <div class="projects-container">
+    <div class="project-card">
+      <h3>FNP Data Analysis</h3>
+      <p>Excel-based analysis of FNP sales data with interactive charts, pivot tables, and performance insights.</p>
+      <a href="fnp data analysis.xlsx">View Project</a>
+    </div>
+
+    <div class="project-card">
+      <h3>Madhav Store Analysis</h3>
+      <p>Power BI dashboard providing insights into Madhav Store’s sales performance, revenue trends, and product analysis.</p>
+      <a href="madhav store analysis.pbix">View Project</a>
+    </div>
+
+    <div class="project-card">
+      <h3>MS Dhoni Career Review</h3>
+      <p>Comprehensive Power BI dashboard analyzing MS Dhoni’s career statistics, match performances, and milestones.</p>
+      <a href="https://github.com/YourGithubUsername/Dhoni_Project" target="_blank">View Project</a>
+    </div>
+  </div>
+
+  <!-- Front-End Development Projects -->
+  <h2>💻 Front-End Development Projects</h2>
+  <div class="projects-container">
+    <div class="project-card">
+      <h3>Portfolio Website</h3>
+      <p>Modern responsive portfolio built with HTML, CSS, and animations for smooth user experience.</p>
+      <a href="portfolio.html">View Project</a>
+    </div>
+
+    <!-- ✅ Replaced E-commerce UI with AI Assistant Chitthi -->
+    <div class="project-card">
+      <h3>AI Assistant - Chitthi</h3>
+      <p>An AI-powered letter-writing assistant built using HTML, CSS, and JavaScript. Generates personalized letters instantly.</p>
+      <a href="https://github.com/shivam121102/ai-assistant-chiththi">View Project</a>
+    </div>
+
+    <div class="project-card">
+      <h3>Chota Bheem Game </h3>
+      <p>Animated War game between chota bheem and kirmada  with validation using JavaScript to improve user engagement and usability.</p>
+      <a href="https://github.com/shivam121102/war-for-dholakpur">View Project</a>
+    </div>
+  </div>
+
+  <a href="portfolio.html" class="back-btn">⬅ Back to Home</a>
+</body>
+</html>

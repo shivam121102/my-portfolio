@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Education | Shivam Rajput</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+    * {
+      margin: 0; padding: 0; box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: #fff;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 50px 20px;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 15px;
+      color: #ff6f61;
+      text-align: center;
+    }
+
+    p.lead {
+      font-size: 1rem;
+      color: #ddd;
+      margin-bottom: 40px;
+      text-align: center;
+      max-width: 800px;
+    }
+
+    .timeline {
+      position: relative;
+      width: 100%;
+      max-width: 800px;
+    }
+
+    .timeline::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 4px;
+      height: 100%;
+      background: #ff6f61;
+    }
+
+    .timeline-item {
+      position: relative;
+      width: 50%;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+
+    .timeline-item.left {
+      left: 0;
+      text-align: right;
+    }
+
+    .timeline-item.right {
+      left: 50%;
+    }
+
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      top: 20px;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: #ff6f61;
+      box-shadow: 0 0 15px #ff6f61;
+    }
+
+    .timeline-item.left::before {
+      right: -10px;
+    }
+
+    .timeline-item.right::before {
+      left: -10px;
+    }
+
+    .timeline-content {
+      background: rgba(255, 255, 255, 0.07);
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+      transition: 0.3s;
+    }
+
+    .timeline-content:hover {
+      transform: translateY(-5px);
+      background: rgba(255, 255, 255, 0.12);
+    }
+
+    .timeline-content h3 {
+      color: #ff6f61;
+      margin-bottom: 10px;
+    }
+
+    .timeline-content p {
+      font-size: 0.95rem;
+      color: #eee;
+      line-height: 1.5;
+    }
+
+    /* Back Button */
+    .back-btn {
+      margin-top: 40px;
+      text-decoration: none;
+      padding: 12px 25px;
+      border-radius: 25px;
+      background: #ff6f61;
+      color: #fff;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    .back-btn:hover {
+      background: #ff3b2e;
+      transform: scale(1.05);
+    }
+
+    @media (max-width: 768px) {
+      .timeline::before { left: 8px; }
+      .timeline-item { width: 100%; padding-left: 40px; padding-right: 25px; }
+      .timeline-item.left, .timeline-item.right { left: 0; text-align: left; }
+      .timeline-item::before { left: 0; }
+    }
+  </style>
+</head>
+<body>
+  <h1>My Education</h1>
+  <p class="lead">Here is a quick overview of my academic background, certifications, and training journey.</p>
+
+  <div class="timeline">
+    <div class="timeline-item left">
+      <div class="timeline-content">
+        <h3>10th Standard</h3>
+        <p>Completed from Apollo public sr. sc. School in 2019 with strong foundation in Mathematics & Science.</p>
+      </div>
+    </div>
+    <div class="timeline-item right">
+      <div class="timeline-content">
+        <h3>12th Standard</h3>
+        <p>Completed from Apollo public sr. sc.School in 2021 with specialization in PCM (Physics, Chemistry, Mathematics).</p>
+      </div>
+    </div>
+    <div class="timeline-item left">
+      <div class="timeline-content">
+        <h3>Graduation</h3>
+        <p>Bachelor’s of technology in Computer Science (2021-25).</p>
+      </div>
+    </div>
+    <div class="timeline-item right">
+      <div class="timeline-content">
+        <h3>Certificates</h3>
+         <p>Certified in front-end web Development from tca pvt. ltd. Gurugram.</p>
+        <p>Certified in Power BI, SQL, and Excel for Data Analysis.</p>
+         <p>N.P.T.E.L    certificate from IIT Kanpur </p>
+      </div>
+    </div>
+    <div class="timeline-item left">
+      <div class="timeline-content">
+        <h3>Training</h3>
+        <p>Completed hands-on training projects  Front-End Web Development and data Analyst.</p>
+      </div>
+    </div>
+  </div>
+
+  <a href="portfolio.html" class="back-btn">⬅ Back to Home</a>
+</body>
+</html>

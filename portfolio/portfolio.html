@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio | Data Analyst</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+    @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: #fff;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    /* ----- Logo Styling ----- */
+    .logo {
+      position: fixed;
+      top: 20px;
+      left: 25px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      cursor: pointer;
+      z-index: 1000;
+      transition: 0.3s ease;
+    }
+
+    .logo img {
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      border: 2px solid #ff6f61;
+      box-shadow: 0 0 15px rgba(255, 111, 97, 0.6);
+      transition: 0.4s ease;
+    }
+
+    .logo span {
+      font-size: 1.6rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      color: #ff6f61;
+      text-transform: uppercase;
+      transition: 0.4s ease;
+    }
+
+    .logo:hover img {
+      transform: rotate(10deg) scale(1.1);
+      box-shadow: 0 0 25px rgba(255, 255, 255, 0.9);
+    }
+
+    .logo:hover span {
+      color: #fad0c4;
+      text-shadow: 0 0 15px rgba(255,255,255,0.8);
+    }
+
+    /* ----- Navigation Menu ----- */
+    nav {
+      position: fixed;
+      top: 25px;
+      right: 40px;
+      display: flex;
+      gap: 25px;
+      z-index: 1000;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 1rem;
+      position: relative;
+      transition: 0.3s;
+    }
+
+    nav a::after {
+      content: '';
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 0%;
+      height: 2px;
+      background: #ff6f61;
+      transition: 0.4s ease;
+    }
+
+    nav a:hover {
+      color: #ff6f61;
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    .container {
+      display: flex;
+      align-items: center;
+      gap: 60px;
+      padding: 40px;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 20px;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+      animation: fadeIn 1.5s ease-in-out;
+    }
+
+    .profile-img {
+      width: 280px;
+      height: 380px;
+      border-radius: 15px;
+      overflow: hidden;
+      border: 3px solid #fff;
+      box-shadow: 0 0 20px rgba(255,255,255,0.3);
+      transform: scale(1);
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .profile-img:hover {
+      transform: scale(1.05) rotate(-2deg);
+    }
+
+    .profile-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .content h1 {
+      font-size: 2.8rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+      background: linear-gradient(45deg, #ff9a9e, #fad0c4, #fad0c4);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: glow 2s infinite alternate;
+    }
+
+    .content h3 {
+      font-size: 1.4rem;
+      font-weight: 400;
+      margin-bottom: 20px;
+      color: #ddd;
+    }
+
+    .content p {
+      max-width: 500px;
+      font-size: 1rem;
+      line-height: 1.6;
+      margin-bottom: 25px;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 15px;
+      margin-bottom: 20px;
+    }
+
+    .btn {
+      padding: 12px 25px;
+      border: none;
+      border-radius: 30px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .btn.primary {
+      background: #ff6f61;
+      color: #fff;
+    }
+
+    .btn.primary:hover {
+      background: #ff3b2e;
+      transform: scale(1.05);
+    }
+
+    .btn.secondary {
+      background: transparent;
+      border: 2px solid #fff;
+      color: #fff;
+    }
+
+    .btn.secondary:hover {
+      background: #fff;
+      color: #000;
+      transform: scale(1.05);
+    }
+
+    /* ----- Social Icons ----- */
+    .socials {
+      display: flex;
+      gap: 20px;
+    }
+
+    .socials a {
+      color: #fff;
+      font-size: 1.5rem;
+      transition: 0.3s;
+    }
+
+    .socials a:hover {
+      color: #ff6f61;
+      transform: scale(1.2);
+      text-shadow: 0 0 15px #ff6f61;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(50px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes glow {
+      from { text-shadow: 0 0 10px #ff6f61, 0 0 20px #ff6f61; }
+      to { text-shadow: 0 0 20px #fad0c4, 0 0 40px #fad0c4; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Logo -->
+  <div class="logo">
+    <img src="logo.jpg" alt="Logo">
+    <span>Shivam</span>
+  </div>
+
+  <!-- Navigation Menu -->
+<!-- Navigation Menu -->
+<nav>
+  <a href="portfolio.html">Home</a>
+  <a href="skill.html">Skills</a>
+  <a href="project.html">Projects</a>
+  <a href="education.html">Education</a>
+  <a href="contact.html">Contact</a>
+</nav>
+
+
+  <div class="container" id="home">
+    <div class="profile-img">
+      <img src="photo.png" alt="Profile Photo">
+    </div>
+    <div class="content">
+      <h1>Shivam Rajput</h1>
+      <h3>Data Analyst & Front-End developer</h3>
+      <p>
+       Skilled in crafting responsive web interfaces and transforming complex datasets into actionable insights. Passionate about data-driven design, interactive dashboards, and storytelling through code and visualization. Dedicated to creating intuitive user experiences backed by analytical precision.
+      </p>
+ <!-- Buttons -->
+<!-- Buttons -->
+<div class="buttons">
+  <a href="https://wa.me/917206171429?text=Hello%20Shivam,%20I%20want%20to%20hire%20you!" 
+     target="_blank">
+    <button class="btn primary">Hire Me</button>
+  </a>
+
+  <a href="11shivam cv......pdf" download="Shivam_Rajput_Resume">
+    <button class="btn secondary">Download CV</button>
+  </a>
+</div>
+
+
+
+      <!-- Social Media Links -->
+      <div class="socials">
+        <a href="https://www.linkedin.com/in/shivam-rajput-93999a363" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/dashboard" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://www.instagram.com/shivam_rajput6784?igsh=MWlheHBmZjB2ZnVwNQ==&utm_source=ig_contact_invite " target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="mailto:shivampaaa188@gmail.com"><i class="fas fa-envelope"></i></a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
