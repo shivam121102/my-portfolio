@@ -45,6 +45,20 @@ Some example projects:
 - CSS
 - JavaScript
 
+## Portfolio Preview
+
+![Portfolio](Screenshot%202026-03-12%20215531.png)
+
+![Portfolio](Screenshot%202026-03-12%20215551.png)
+
+![Portfolio](Screenshot%202026-03-12%20215627.png)
+
+![Portfolio](Screenshot%202026-03-12%20215751.png)
+
+![Portfolio](Screenshot%202026-03-12%20215809.png)
+
+![Portfolio](Screenshot%202026-03-12%20215824.png)
+
 ## Purpose of This Portfolio
 The goal of this portfolio is to present my projects and skills professionally so recruiters and companies can easily understand my capabilities as a Data Analyst.
 
